@@ -27,9 +27,3 @@ class Config(metaclass=Singleton):
 
     def read_title(self, sheet):
         self.title = [cell.value for cell in list(sheet.get_rows())[0] if cell.value]
-
-
-if __name__ == '__main__':
-    config = Config()
-    print(config.people)
-    print(config.title)

@@ -34,9 +34,3 @@ class EmailContent:
         lines.append('\n'.join(tr2))
         lines.append('</TBODY></TABLE>')
         return self.template % {'name': self.name, 'content': '\n'.join(lines)}
-
-
-if __name__ == '__main__':
-    ec = EmailContent('姜策', [('test1', 123), ('test2', 234)])
-    ec.load_template()
-    print(ec.html)

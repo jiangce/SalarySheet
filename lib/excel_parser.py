@@ -39,8 +39,3 @@ class ExcelParser:
                     return i, j
                 j += 1
             i += 1
-
-
-if __name__ == '__main__':
-    parser = ExcelParser(r'C:\Users\策\Desktop\工资条\测试.xlsx')
-    print(parser.parse('7月'))

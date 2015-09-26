@@ -42,16 +42,3 @@ def send_email(to_email, from_email, email_password, email_host, email_port, ema
         print('Send 发送失败！失败码：%s' % e)
         return False
 
-
-if __name__ == '__main__':
-    from lib.email_content import template
-
-    content = template % {'name': '姜策'}
-
-    send_result = send_email(to_email=['jiangce@togeek.cn'], from_email='jiangce@togeek.cn',
-                             email_password='jl123456', email_host='smtp.ym.163.com', email_port=25,
-                             email_title='test', email_contents=content)
-    if send_result:
-        print('send success!')
-    else:
-        print('send fail!')
